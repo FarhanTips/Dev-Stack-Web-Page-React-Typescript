@@ -1,0 +1,5 @@
+/* Root CSS File */
+
+@import "tailwindcss";
+@plugin "daisyui";
+
