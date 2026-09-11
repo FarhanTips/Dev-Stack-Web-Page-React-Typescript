@@ -12,10 +12,10 @@ const Nav = () => {
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
-            <div className="flex gap-1">
-                <button className="btn border-none bg-white brounded-3xl">Sign In</button>
-                <button className="btn btn-secondary bg-[#d91b7e] rounded-3xl">
-                    Sign UP
+            <div className="flex gap-2">
+                <button className="btn btn-ghost rounded-3xl px-6">Sign In</button>
+                <button className="btn btn-secondary bg-[#d91b7e] rounded-3xl px-6">
+                    Sign Up
                 </button>
 
             </div>
