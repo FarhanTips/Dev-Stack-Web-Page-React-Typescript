@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { TechnologyType } from "../TechnologyType";
+import { toast } from "react-toastify";
 
 
 interface TechnologyCardProps {
@@ -12,6 +13,7 @@ const TechnologyCard = ({ technology, selectedTechArr, setSelectedTechArr }: Tec
 
     const handleAddButton = (newTech: TechnologyType): void => {
         setSelectedTechArr([...selectedTechArr, newTech])
+        toast.success(`${newTech.name} Added Successfully!`);
     };
 
     let IsDisable = false;
@@ -23,7 +25,7 @@ const TechnologyCard = ({ technology, selectedTechArr, setSelectedTechArr }: Tec
 
     return (
         <div>
-            <div className="border border-slate-200 rounded-2xl p-5 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <div className={`border ${IsDisable ? "border-pink-500" : "border-slate-200"} rounded-2xl p-5 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300`}>
 
                 {/* Icon + Badge */}
                 <div className="flex items-center justify-between">
@@ -60,13 +62,13 @@ const TechnologyCard = ({ technology, selectedTechArr, setSelectedTechArr }: Tec
                 <button disabled={IsDisable}
                     onClick={() => handleAddButton(technology)}
                     className={`btn w-full mt-5 rounded-xl ${IsDisable
-                            ? "border-none bg-pink-100 text-pink-500"
-                            : "btn-neutral text-white"}`}>
+                        ? "border-none bg-pink-100 text-pink-500"
+                        : "btn-neutral text-white"}`}>
                     {IsDisable ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
 
             </div>
-        </div>
+        </div >
     );
 };
 

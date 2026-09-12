@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { TechnologyType } from "../../TechnologyType";
 import StackItemCard from "./StackItemCard";
+import { toast } from "react-toastify";
 
 
 interface StackItemsProps {
@@ -12,6 +13,7 @@ const StackItems = ({ selectedTechArr, setSelectedTechArr }: StackItemsProps) =>
 
     const handleRemoveAllButton = () =>{
         setSelectedTechArr([]);
+        toast.info("Stack Cleared!");
     }
 
 

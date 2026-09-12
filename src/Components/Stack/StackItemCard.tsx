@@ -2,6 +2,7 @@
 
 import type { Dispatch, SetStateAction } from "react";
 import type { TechnologyType } from "../../TechnologyType";
+import { toast } from "react-toastify";
 
 
 interface StackItemCardProps {
@@ -16,6 +17,7 @@ const StackItemCard = ({ item, selectedTechArr, setSelectedTechArr }: StackItemC
     const handleCrossButton = (SItem: TechnologyType) =>{
         const newArr = selectedTechArr.filter(elem => elem.id !== SItem.id)
         setSelectedTechArr(newArr);
+        toast.info(`${SItem.name} Removed Successfully!`);
     }
 
 
