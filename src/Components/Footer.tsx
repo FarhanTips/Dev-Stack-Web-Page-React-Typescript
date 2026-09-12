@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div>
             <div className="border-y border-gray-300 my-10">
-                <div className="w-10/12 mx-auto grid grid-cols-[1.5fr_1fr_1fr_1fr] items-start my-18">
+                <div className="w-10/12 mx-auto grid grid-cols-[1.5fr_1fr_1fr_1fr] items-start my-15">
                     <div>
                         <img className="mb-3" src={logo} alt="" />
                         <p className="mb-10 text-[#64748b]">Curated tools, technologies, and resources for developers building modern software.</p>
@@ -43,7 +43,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-10/12 mx-auto flex justify-between items-center text-[#94a3b8] mb-14">
+            <div className="w-10/12 mx-auto flex justify-between items-center text-[#94a3b8] mb-12">
                 <p>© 2026 Dev Stack. All rights reserved.</p>
                 <ul className="flex gap-8">
                     <li><a href="">Privacy</a></li>
