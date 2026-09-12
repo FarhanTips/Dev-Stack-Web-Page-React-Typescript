@@ -47,7 +47,7 @@ const Footer = () => {
                 <p>© 2026 Dev Stack. All rights reserved.</p>
                 <ul className="flex gap-8">
                     <li><a href="">Privacy</a></li>
-                    <li><a href="">Terms</a></li>
+                    <li><a href="Terms">Terms</a></li>
                 </ul>
             </div>
         </div>
