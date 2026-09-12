@@ -1,6 +1,7 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { TechnologyType } from "../TechnologyType";
 import TechnologyCard from "./TechnologyCard";
+import Stack from "./Stack/Stack";
 
 interface TechnologiesProps {
     TechDataPromise: Promise<TechnologyType[]>
@@ -8,6 +9,8 @@ interface TechnologiesProps {
 
 const Technologies = ({ TechDataPromise }: TechnologiesProps) => {
     const technologies = use(TechDataPromise);
+
+    const [selectedTechArr, setSelectedTechArr] = useState<TechnologyType[]>([]);
 
     return (
         <div className="w-10/12 mx-auto">
@@ -27,13 +30,19 @@ const Technologies = ({ TechDataPromise }: TechnologiesProps) => {
 
                     technologies.map((technology, idx) => <TechnologyCard 
                     key={idx} 
-                    technology={technology}></TechnologyCard>)
+                    technology={technology}
+                    selectedTechArr={selectedTechArr}
+                    setSelectedTechArr={setSelectedTechArr}></TechnologyCard>)
 
                     }
 
                 </div>
 
 
+                {/* Stack */}
+                <div className="col-span-1">
+                    <Stack selectedTechArr={selectedTechArr} setSelectedTechArr={setSelectedTechArr}></Stack>
+                </div>
 
             </div>
         </div>

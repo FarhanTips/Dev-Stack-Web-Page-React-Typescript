@@ -1,11 +1,26 @@
+import type { Dispatch, SetStateAction } from "react";
 import type { TechnologyType } from "../TechnologyType";
 
 
 interface TechnologyCardProps {
-    technology: TechnologyType
+    technology: TechnologyType,
+    selectedTechArr: TechnologyType[],
+    setSelectedTechArr: Dispatch<SetStateAction<TechnologyType[]>>;
 }
 
-const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+const TechnologyCard = ({ technology, selectedTechArr, setSelectedTechArr }: TechnologyCardProps) => {
+
+    const handleAddButton = (newTech: TechnologyType): void => {
+        setSelectedTechArr([...selectedTechArr, newTech])
+    };
+
+    let IsDisable = false;
+    for (let i of selectedTechArr) {
+        if (i.id === technology.id) {
+            IsDisable = true;
+        }
+    }
+
     return (
         <div>
             <div className="border border-slate-200 rounded-2xl p-5 bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
@@ -42,7 +57,13 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
                 </div>
 
                 {/* Add to Stack Button*/}
-                <button className="btn btn-neutral w-full mt-5 rounded-xl text-white">Add to Stack</button>
+                <button disabled={IsDisable}
+                    onClick={() => handleAddButton(technology)}
+                    className={`btn w-full mt-5 rounded-xl ${IsDisable
+                            ? "border-none bg-pink-100 text-pink-500"
+                            : "btn-neutral text-white"}`}>
+                    {IsDisable ? "✓ Added to Stack" : "Add to Stack"}
+                </button>
 
             </div>
         </div>
