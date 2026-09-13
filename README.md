@@ -1,32 +1,20 @@
-# React + TypeScript + Vite
+🚀 DevStack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern and interactive Technology Stack Builder built with React and TypeScript. Explore different technologies, view their categories, difficulty levels, ratings and descriptions, and create your own personalized technology stack with just a few clicks.
 
-Currently, two official plugins are available:
+✨ Features
+🔍 Explore Technologies — Browse different technologies with their icons, descriptions, categories, difficulty levels and ratings.
+🧩 Build Your Own Stack — Add technologies to your personal stack and see your selected technologies instantly.
+🗑️ Manage Your Stack — Remove individual technologies or clear the entire stack with a single click.
+🔔 Interactive Notifications — Get instant success and information notifications when adding, removing or clearing technologies.
+⚡ Dynamic Data Loading — Technology information is loaded asynchronously from a JSON data source with React Suspense.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+🛠️ Technologies Used
+React.js — Building the user interface and reusable components
+TypeScript — Type-safe development
+Tailwind CSS — Modern UI styling
+React Suspense — Handling asynchronous technology data
+React Toastify — User-friendly notifications
+Vite — Fast development and build tooling
+JSON — Storing technology information
