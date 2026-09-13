@@ -27,8 +27,8 @@ const Technologies = ({ TechDataPromise }: TechnologiesProps) => {
 
                     {
 
-                    technologies.map((technology, idx) => <TechnologyCard 
-                    key={idx} 
+                    technologies.map(technology => <TechnologyCard 
+                    key={technology.id} 
                     technology={technology}
                     selectedTechArr={selectedTechArr}
                     setSelectedTechArr={setSelectedTechArr}></TechnologyCard>)
