@@ -72,7 +72,7 @@ Technology information is loaded asynchronously from a JSON data source with Rea
 
 ### **2. What is the difference between props and state?**
 
-**Answer:** Props are used to pass data from a parent component to a child component and are read-only. State is data managed inside a component that can change and cause the component to re-render.
+**Answer:** Props are used to pass data from a parent component to a child component and they are read-only from the child's side. State is data managed inside a component that can change and cause the component to re-render.
 
 ### **3. What does the `useState` hook do, and where did you use it in this project?**
 
